@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap");
+
+@layer base {
+	li {
+		@apply p-4;
+	}
+
+	button {
+		@apply text-white bg-[#e943ff] 
+    hover:bg-[#dc64ec]  rounded-md;
+	}
+}
+
+body {
+	font-family: Sora;
+}
+
+.test {
+	@apply text-[#e943ff] bg-[#ffffff] rounded-md
+  hover:text-[#ffffff] hover:border-solid hover:border-[2px] hover:border-[#ffffff];
+}
