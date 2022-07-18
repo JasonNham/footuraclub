@@ -36,6 +36,12 @@ app.route("/").get(async (req, res) => {
 	});
 });
 
+app.route("/testRoute").get(async (req, res) => {
+	res.send({
+		status: "Route Operational",
+	});
+});
+
 app.route("/waitlistUser").post(async (req, res) => {
 	let newUser = new WaitlistUser(req.body);
 
