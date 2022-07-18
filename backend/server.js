@@ -30,7 +30,10 @@ app.use(express.static(__dirname + "/public"));
 // @access public
 
 app.route("/").get(async (req, res) => {
-	res.send({ message: "Footura Club 🚀", location: process.env.MY_VAR });
+	res.send({
+		message: "Footura Club 🚀",
+		location: process.env.RUNNING_LOCATION,
+	});
 });
 
 app.route("/waitlistUser").post(async (req, res) => {
