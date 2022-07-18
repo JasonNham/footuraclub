@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-scroll";
-import { useEffect } from "react";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
@@ -12,7 +11,7 @@ const Navbar = () => {
 
 	return (
 		<div className="fixed w-screen h-[80px] z-10 bg-[#ebebeb] drop-shadow-xl border-b border-solid border-[1px] border-[#dadada]">
-			<div className="px-6 flex justify-between items-center w-full h-full">
+			<div className="px-6 flex justify-between items-center w-screen h-full">
 				<div className="flex items-center justify-between w-10/12">
 					<h1 className="text-3xl font-bold sm:text-4xl text-[#e943ff] cursor-pointer group">
 						<Link to="home" smooth={true} offset={0} duration={500}>
@@ -40,7 +39,7 @@ const Navbar = () => {
 						</div>
 						<li className="text-lg cursor-pointer group">
 							<Link to="howItWorks" smooth={true} offset={-80} duration={500}>
-								How It Works?
+								How It Works
 							</Link>
 							<div className="w-full h-[3px] bg-[#e943ff] scale-x-0 group-hover:scale-x-100 transition-transform" />
 						</li>
@@ -55,7 +54,7 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</div>
-				<div className="hidden md:flex">
+				<div className="hidden md:flex mr-4">
 					<button className="px-6 py-3">
 						<Link to="register" smooth={true} offset={-50} duration={500}>
 							Register
@@ -72,7 +71,9 @@ const Navbar = () => {
 			</div>
 			<ul
 				className={
-					!nav ? "hidden md:hidden" : "fixed bg-[#f5f5f5] w-full px-8 md:hidden"
+					!nav
+						? "hidden md:hidden"
+						: "fixed bg-[#f5f5f5] w-screen px-8 md:hidden"
 				}
 			>
 				<li className="border-b-2 border-zinc-300 w-full">
@@ -97,7 +98,7 @@ const Navbar = () => {
 						About
 					</Link>
 				</li>
-				<li className=" w-full">
+				<li className="border-b-2 border-zinc-300 w-full">
 					<Link
 						onClick={handleClose}
 						to="howItWorks"
@@ -105,7 +106,18 @@ const Navbar = () => {
 						offset={-50}
 						duration={500}
 					>
-						How It Works?
+						How It Works
+					</Link>
+				</li>
+				<li className=" w-full">
+					<Link
+						onClick={handleClose}
+						to="timeline"
+						smooth={true}
+						offset={-50}
+						duration={500}
+					>
+						Roadmap
 					</Link>
 				</li>
 				<div className="flex flex-col my-4">

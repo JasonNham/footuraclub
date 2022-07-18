@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const PORT = process.env.PORT || 5000;
 const connectDB = require("./config/db.js");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -27,6 +28,10 @@ app.use(express.static(__dirname + "/public"));
 // @desc adding a new waitlisted user
 // @method post
 // @access public
+
+app.route("/").get(async (req, res) => {
+	res.send({ message: "Footura Club 🚀" });
+});
 app.route("/waitlistUser").post(async (req, res) => {
 	let newUser = new WaitlistUser(req.body);
 
@@ -61,8 +66,6 @@ app
 	.delete((req, res) => {
 		res.send(`delete request is sending on port ${PORT}`);
 	});
-
-const PORT = process.env.PORT || 5000;
 
 app.listen(
 	PORT,
