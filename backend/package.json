@@ -2,12 +2,10 @@
 	"name": "footura_launch",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "server.js",
 	"scripts": {
-		"start": "node backend/server",
-		"server": "nodemon backend/server",
-		"client": "npm start --prefix frontend",
-		"dev": "concurrently \"npm run server\"  \"npm run client\"  "
+		"start": "node server",
+		"server": "nodemon server"
 	},
 	"author": "Jason Nham",
 	"license": "ISC",
