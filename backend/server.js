@@ -1,6 +1,6 @@
 const express = require("express");
-const dotenv = require("dotenv");
-const PORT = process.env.PORT || 5000;
+const dotenv = require("dotenv").config();
+const PORT = process.env.PORT;
 const connectDB = require("./config/db.js");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -30,8 +30,9 @@ app.use(express.static(__dirname + "/public"));
 // @access public
 
 app.route("/").get(async (req, res) => {
-	res.send({ message: "Footura Club 🚀" });
+	res.send({ message: "Footura Club 🚀", location: process.env.MY_VAR });
 });
+
 app.route("/waitlistUser").post(async (req, res) => {
 	let newUser = new WaitlistUser(req.body);
 
@@ -57,15 +58,10 @@ app.route("/waitlistUser").get(async (req, res) => {
 /*	By formating the way below we can make our code more readable using 
 	.route instead of the above format 
 */
-app
-	.route("/user")
-	.post((req, res) => {
-		console.log(req.body);
-		res.send(req.body);
-	})
-	.delete((req, res) => {
-		res.send(`delete request is sending on port ${PORT}`);
-	});
+app.route("/user").post((req, res) => {
+	console.log(req.body);
+	res.send(req.body);
+});
 
 app.listen(
 	PORT,
