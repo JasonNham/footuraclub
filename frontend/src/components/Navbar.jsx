@@ -10,7 +10,7 @@ const Navbar = () => {
 	const handleClose = () => setNav(!nav);
 
 	return (
-		<div className="fixed w-screen h-[80px] z-10 bg-[#ebebeb] drop-shadow-xl border-b border-solid border-[1px] border-[#dadada]">
+		<div className="fixed w-screen h-[80px] z-50 bg-[#ebebeb] drop-shadow-xl border-b border-solid border-[1px] border-[#dadada]">
 			<div className="px-6 flex justify-between items-center w-screen h-full">
 				<div className="flex items-center justify-between w-10/12">
 					<h1 className="text-3xl font-bold sm:text-4xl text-[#e943ff] cursor-pointer group">

@@ -42,27 +42,36 @@ app.route("/testRoute").get(async (req, res) => {
 	});
 });
 
-app.route("/waitlistUser").post(async (req, res) => {
-	let newUser = new WaitlistUser(req.body);
+/* 
+	[waitlistUser]:
+*/
+app
+	.route("/waitlistUser")
+	// POST : Allows a user to register into the waitlist
+	.post(async (req, res) => {
+		let newUser = new WaitlistUser(req.body);
 
-	const existing = await WaitlistUser.find({ email: req.body.email });
+		const existing = await WaitlistUser.find({ email: req.body.email });
 
-	if (existing.length < 1) {
-		newUser.save((err, waitlistedUser) => {
-			if (err) {
-				res.send(err);
-			}
-			res.json(waitlistedUser);
-		});
-	} else {
-		console.log("Email Already Exists!");
-		res.json("Email Already Exists!");
-	}
-});
-app.route("/waitlistUser").get(async (req, res) => {
-	const count = await WaitlistUser.count();
-	res.json(count);
-});
+		if (existing.length < 1) {
+			newUser.save((err, waitlistedUser) => {
+				if (err) {
+					res.send(err);
+				}
+				console.log({ resStatus: 0, waitlistedUser });
+				res.json({ resStatus: 0, waitlistedUser });
+			});
+		} else {
+			console.log({ resStatus: 1, Response: "Email Already Exists" });
+			// res.json({ resStatus: 1, Response: "Email Already Exists" });
+			res.status(400).send({ error: "Email Already Exists" });
+		}
+	})
+	// GET : retrieves the number of waitlisted users
+	.get(async (req, res) => {
+		const count = await WaitlistUser.count();
+		res.json(count);
+	});
 
 /*	By formating the way below we can make our code more readable using 
 	.route instead of the above format 
