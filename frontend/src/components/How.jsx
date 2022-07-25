@@ -10,7 +10,7 @@ import shoeStats from "../assets/shoestats.jpg";
 
 const How = () => {
 	return (
-		<div name="howItWorks" className="bg-[#ffffff] w-full md:h-screen h-fit">
+		<div name="howItWorks" className="bg-[#ffffff] w-full h-fit">
 			<div className="w-full mx-auto sm:h-full grid md:grid-rows-3 auto-rows-auto justify-top px-8">
 				<div className="">
 					<h1 className="row-span-1 md:text-7xl sm:text-6xl text-5xl font-bold text-center mt-[60px] md:mb-[80px] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">

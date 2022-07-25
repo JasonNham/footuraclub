@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = () => {
 	return (
-		<div name="about" className="bg-[#9f31e9] w-full md:h-screen py-10">
+		<div name="about" className="bg-[#9f31e9] w-full h-fit py-10">
 			<div className="max-w-[1400px] mx-auto flex flex-col justify-top mt-4 px-6 pt-3">
 				<h1 className="md:text-7xl text-6xl font-bold text-center text-[#ffffff]">
 					Our Mission

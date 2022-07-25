@@ -4,7 +4,10 @@ import timeline from "../assets/timeline.jpg";
 
 const Timeline = () => {
 	return (
-		<div name="timeline" className="flex justify-center flex-col">
+		<div
+			name="timeline"
+			className="flex justify-center flex-col h-fit mt-[60px] md:mt-10"
+		>
 			<h1 className="row-span-1 md:text-7xl sm:text-6xl text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
 				Roadmap
 			</h1>

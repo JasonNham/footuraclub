@@ -13,9 +13,11 @@ function App() {
 		<div>
 			<Helmet>
 				<title>Footura Club</title>
+				<meta name="title" content="Footura" data-react-helmet="true" />
 				<meta
 					name="description"
 					content="Innovative Web3 Technology that rewards you for your fitness."
+					data-react-helmet="true"
 				/>
 			</Helmet>
 			<Navbar />
