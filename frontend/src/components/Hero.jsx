@@ -17,7 +17,7 @@ const Hero = () => {
 						Footura: Web3 Fintech that Connects Move to Earn to the Metaverse.
 						With user friendly Web3 technology, Footura will establish a bridge
 						from the Move to Earn business to the Metaverse that users create,
-						in effect, by exercising and achieving hirer levels.
+						by exercising and achieving higher levels.
 					</p>
 					<h1 className="my-4 text-3xl text-center md:text-left md:text-2xl text-[#ffffff]">
 						Gamify The Workout Experience

@@ -42,7 +42,7 @@ const How = () => {
 							</div>
 							<p className="row-span-2">
 								After downloading the app, users can equip their account with
-								the proper NFT to fit their workout needs.
+								the proper NFT shoes to fit their workout needs.
 							</p>
 						</div>
 						<div className="text-center flex flex-col mx-4 h-fit mb-5">
@@ -50,9 +50,9 @@ const How = () => {
 								<GiRun className="w-[50px] h-[50px]" />
 							</div>
 							<p className="row-span-2 ">
-								Users can walk, jog or run to earn tokens backed by
-								stablecoins(USDC). Earnings will not reflect price volatility,
-								but rather user efforts and achievements.
+								Users can walk, jog or run to earn tokens backed by stablecoins
+								(USDC). Earnings will not reflect price volatility, but rather
+								user efforts and achievements.
 							</p>
 						</div>
 						<div className="text-center flex flex-col mx-4 h-fit">
