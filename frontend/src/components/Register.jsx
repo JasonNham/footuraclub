@@ -120,7 +120,7 @@ const Register = () => {
 					</div>
 					<div className="flex mt-[40px]">
 						<img
-							className="object-scale-down md:w-[500px] w-[200px]"
+							className="object-scale-down md:w-[300px] w-[120px]"
 							src={jogger2}
 							alt="StepN Jogger NFT"
 						/>
