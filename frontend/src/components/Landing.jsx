@@ -1,9 +1,6 @@
 import React from "react";
-import jogger2 from "../assets/StepN_jogger2.png";
 import Helmet from "react-helmet";
 import statue from "../assets/statue.png";
-// import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-// import { Link } from "react-scroll";
 
 const Landing = () => {
 	return (
@@ -27,11 +24,6 @@ const Landing = () => {
 					</p>{" "}
 					Shouldn't Cost You...
 				</h1>
-				{/* <img
-					className="object-scale-down px-10 mt-[50px]"
-					src={jogger2}
-					alt="StepN Jogger NFT"
-				/> */}
 				<div className="grid grid-cols-6 gap-4 mt-[60px]">
 					<img
 						className="w-[600px] md:w-[450px] col-start-1 col-end-6 md:col-start-2 md:col-end-5"

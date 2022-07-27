@@ -1,12 +1,9 @@
 import React from "react";
 
 import { BsFillPhoneFill } from "react-icons/bs";
-import { GiRunningShoe, GiRun } from "react-icons/gi";
+import { GiRun } from "react-icons/gi";
 import { MdPaid } from "react-icons/md";
 import jogger2 from "../assets/StepN_jogger2.png";
-
-import runData from "../assets/rundata.jpg";
-import shoeStats from "../assets/shoestats.jpg";
 
 const How = () => {
 	return (

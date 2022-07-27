@@ -1,7 +1,5 @@
 import React from "react";
 
-import { AiOutlineMail } from "react-icons/ai";
-
 const Foot = () => {
 	return (
 		<div className="w-full flex flex-col justify-center items-center mx-auto py-15 px-4 bg-[#e943ff] h-[200px]">

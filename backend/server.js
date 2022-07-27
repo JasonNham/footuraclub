@@ -63,7 +63,6 @@ app
 			});
 		} else {
 			console.log({ resStatus: 1, Response: "Email Already Exists" });
-			// res.json({ resStatus: 1, Response: "Email Already Exists" });
 			res.status(400).send({ error: "Email Already Exists" });
 		}
 	})
